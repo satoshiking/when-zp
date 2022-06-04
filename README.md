@@ -12,3 +12,7 @@ Goals:
    - Once per month contract should change some part of ETH at any DEX(Uniswap, Curve or others) to get USDT/USDC required to pay salary to all 5 members and send them to team.  
 2. Write tests for all functionality
 3. Deploy this SC to any public test net (Rinkeby, Robsten or other)
+
+
+## Tools for development
+1. [Hard hat](https://hardhat.org/getting-started) 
