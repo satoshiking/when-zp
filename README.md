@@ -6,13 +6,21 @@ We would like to create salary smart contract that helps them to be paid on mont
 ## Description
 Goals: 
 1. Create smart contract(SC) that represents bank with collected ETH with next properties:
-   - Has predefined list with 5 team members wallets and their USD monthly salary  
+   - Defined list with 5 team members wallets and their USD monthly salary during contract init  
    - Everyone inside and outside of list can deposit ETH on it
    - Possibility to withdraw all ETH funds from contract when 3 of 5 members agree with it. (Some kind of multi sig functionality)
    - Once per month contract should change some part of ETH at any DEX(Uniswap, Curve or others) to get USDT/USDC required to pay salary to all 5 members and send them to team.  
-2. Write tests for all functionality
-3. Deploy this SC to any public test net (Rinkeby, Robsten or other)
+3. Write tests for all functionality
+4. Deploy this SC to any public test net (Rinkeby, Robsten or other)
 
 
 ## Tools for development
-1. [Hard hat](https://hardhat.org/getting-started) 
+1. [Solidity](https://docs.soliditylang.org/)
+2. [Hard hat](https://hardhat.org/getting-started)
+3. [Remix IDE](https://remix.ethereum.org/)
+
+
+## Local Development
+- `npx hardhat compile`
+- `npx hardhat node`
+- `npx hardhat run scripts/deploy.js --network localhost`
