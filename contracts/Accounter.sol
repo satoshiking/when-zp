@@ -4,6 +4,7 @@ pragma solidity ^0.8.0;
 import "hardhat/console.sol";
 
 contract Accounter {
+    uint256 public balance;           // remaining contract balance
     uint256 public lastPaymentBlock;  // block number of last payed salary
 
     struct Employee {
@@ -12,8 +13,6 @@ contract Accounter {
     }
 
     Employee[] public employees;  // A dynamically-sized array of `Employee` structs.
-
-    // mapping(address => Employee) employees; // do we need mapping here ?
 
     constructor(Employee[] memory _employees) {
         // Init contract for each of the provided employees adding then into array
@@ -28,15 +27,19 @@ contract Accounter {
         console.log("Done deploying");
     }
 
-//    function deposit() public view returns () {
-//        console.log("Deploying a Greeter with greeting:", _greeting);
-//    }
+    function deposit() public payable returns (uint256) {
+        // Everyone can deposit ETH on contract's balance
+        balance += msg.value;
+        console.log("Deposit is made (Wei):", msg.value);
+        console.log("New contract Balance (Wei):", balance);
+        return balance;
+    }
 
-    function withdraw(string memory _greeting) public {
+    function withdraw() public view {
         console.log("Withdraw");
     }
 
-    function pay(string memory _greeting) public {
+    function pay() public view {
         /*
         Public transaction that anyone can call triggers swap and payment distribution if one month passed from
         previous payment.
