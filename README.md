@@ -24,15 +24,22 @@ Goals:
 - `npx hardhat compile`
 - `npx hardhat node`
 - `npx hardhat run scripts/deploy.js --network localhost`
+- `npx hardhat test` - to run all mocha tests
 
 
 To deploy contract with Remix iDE we need to provide _employees argument while deploying:
 ```
 [ 
-   ["0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199",  1000], 
-   ["0xdd2fd4581271e230360230f9337d5c0430bf44c0",  1000], 
-   ["0xbda5747bfd65f08deb54cb465eb87d40e51b197e",  1000], 
-   ["0x2546bcd3c84621e976d8185a91a922ae77ecec30",  1000], 
-   ["0xcd3b766ccdd6ae721141f452c550ca635964ce71",  1000] 
+   ["0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",  500], 
+   ["0x70997970C51812dc3A010C7d01b50e0d17dc79C8",  500], 
+   ["0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC",  500], 
+   ["0x90F79bf6EB2c4f870365E785982E1f101E93b906",  1000], 
+   ["0x15d34AAf54267DB7D7c367839AAf71A00a2C6A65",  100] 
 ]
 ```
+
+### Links:
+- [Example](https://github.com/EKami/test_project) of small test project that helped me to set up debugging for mocha tests
+
+- [Article](https://www.codementor.io/@beber89/build-a-basic-multisig-vault-in-solidity-for-ethereum-1tisbmy6ze) - with great example how to implement multisig at ethereum SC. This functionality is copy/pasted from there. 
+Along with it's [github](https://github.com/beber89/multisig-sample-solidity) repo.
