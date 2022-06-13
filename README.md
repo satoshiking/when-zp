@@ -18,6 +18,8 @@ Goals:
 1. [Solidity](https://docs.soliditylang.org/)
 2. [Hard hat](https://hardhat.org/getting-started)
 3. [Remix IDE](https://remix.ethereum.org/)
+4. [Mocha](https://mochajs.org/) test framework with [chai](https://www.chaijs.com/) assertion library
+5. Pycharm debug configuration to run tests: ![img.png](images/debug-mocha.png)
 
 
 ## Local Development
